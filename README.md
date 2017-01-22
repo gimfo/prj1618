@@ -1,9 +1,7 @@
 # Liens vers wiki
 [Page Système](https://github.com/gimfo/prj1618/wiki/Syst%C3%A8me)
-[Page Outils informatique](
-## Welcome to GitHub Pages
+[Page Outils informatique](https://github.com/gimfo/prj1618/wiki/Outils-informatique-de-gestion)
 
-You can use the [editor on GitHub](https://github.com/gimfo/prj1618/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
