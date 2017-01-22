@@ -1,10 +1,6 @@
-# Liens
+### Liens
 
-[Wiki Système](https://github.com/gimfo/prj1618/wiki/Syst%C3%A8me)
-
-
-
-
+[[Wiki Système|Système]]
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/gimfo/prj1618/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
