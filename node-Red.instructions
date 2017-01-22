@@ -1,4 +1,0 @@
-#Démarrer le service node-RED
-node-red-start
-#Activer le démarrage de node-RED au boot
-sudo systemctl enable nodered.service
