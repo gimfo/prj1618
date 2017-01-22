@@ -1,5 +1,5 @@
-### Liens
-
+# Liens vers wiki
+[[Outils informatique de gestion|Outils informatique de gestion]]
 [[Wiki Système|Système]]
 ## Welcome to GitHub Pages
 
