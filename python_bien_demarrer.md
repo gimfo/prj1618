@@ -57,28 +57,26 @@ else:
     print('Nombre : %d < 2' % nombre)
     nombre *= 2
 ```
-Notez l'absence de ; à la fin des lignes, la virgule du printf qui se change en % dans l'appel à print (ici utilisé comme fonction, conformément aux usages dans Python 2.x). Remarquez que le seul caractère structurant restant est le : que l'on retrouvera systématiquement derrière les définitions de classes, de fonctions, les mots-clés if, while, else, elif (le else if), for, with, ..., j'en oublie certainement. Pour écrire selon les conventions, ne laissez pas d'espace avant et passez à la ligne directement après.
+Notez l'absence de ; à la fin des lignes, la virgule du printf qui se change en % dans l'appel à print (ici utilisé comme fonction, conformément aux usages dans Python 2.x). Remarquez que le seul caractère structurant restant est le : que l'on retrouvera systématiquement derrière les définitions de classes, de fonctions, les mots-clés if, while, else, elif (le else if), for, with, ..., Pour écrire selon les conventions, ne laissez pas d'espace avant et passez à la ligne directement après.
 
-En parlant de passer à la ligne, il est conseillé de ne pas dépasser les fameux 80 caractères d'une ligne, cela tant pour des raisons historiques que pratiques. Avant, je n'y faisais pas vraiment attention. Mais maintenant que j'ai un portable dont l'écran fait 10,2 pouces de large, je suis reconnaissant à ceux qui ont limité leurs lignes à 80 caractères. J'en fais donc autant. Le caractère pour aller à la ligne est l'antislash \. Toutefois, le passage à la ligne est possible directement (sans caractère spécifique) entre une parenthèse ouvrante et une parenthèse fermante.
-
-Personnellement, je trouve que le : est de trop. Je l'oublie très souvent et il n'apporte rien de plus au programme. Pour en savoir plus sur ce caractère de contrôle, visitez les pointeurs [contrôles] qui m'ont été indiqués par Victor Stinner.
-
-1.6 LA BOUCLE 'FOR', UNE PARTICULARITÉ INTÉRESSANTE
+## 1.6 LA BOUCLE 'FOR', UNE PARTICULARITÉ INTÉRESSANTE
 La définition d'une boucle 'for' en Python se rapproche furieusement de celle que l'on peut écrire en bash. En effet, elle n'utilise pas de compteur spécifique comme en C ou en Pascal (les variables i et j classiques). Au lieu de cela, l'itération s'effectue sur une liste en égrenant les éléments les uns après les autres :
-
+```
 liste = ['navet', 'carotte', 'chou', 'poireau']
 for legume in liste:
     print('%s est un légume !' % legume)
 print('Il me manque quoi pour faire une potée ?')
+```
 Du coup, si l'on souhaite utiliser un compteur classique, soit on écrit la liste à la main, soit on utilise l'une des fonctions range([start,] stop [, step]) ou xrange([start,] stop [, step]). Les arguments start et step sont optionnels. Si vous n'indiquez qu'un seul argument, il s'agit de la valeur de fin. Ces fonctions génèrent des listes de nombres allant de start à stop avec un pas de step. Par exemple, on peut faire :
-
+```
 for i in xrange(2, 42, 3):
     print('%d' % i)
+```
 Il est préférable d'utiliser la fonction xrange() car elle génère les nombres au fur et à mesure. Elle est plus rapide car le temps de prégénération de la liste est supprimé. Elle est moins gourmande en mémoire car elle ne stocke pas la liste complète.
 
 Toutefois, si vous voulez réaliser une boucle sur une liste ou un objet sur lequel vous pouvez faire des itérations, utilisez la première méthode. Elle est bien plus élégante et lisible. Si, comme moi, vous avez eu le vieux réflexe du compteur explicite, reprenez votre code pour le corriger en le supprimant. Le résultat n'en sera que meilleur !
 
-1.7 LES TUPLES
+## 1.7 LES TUPLES
 Les tuples ressemblent en quelque sorte à une structure de données, sans en être vraiment une. Je ne vois pas vraiment d'équivalent parmi les langages que je connais. Je fais énormément usage des tuples dans les quelques programmes Python que j'ai écris. Je vois les tuples comme une liste de valeurs dont le type n'est pas forcément uniforme. Par exemple mon_tuple = ('rouge', 3, None, factorielle) est un tuple.
 
 Les nombreux avantages des tuples :
@@ -89,11 +87,11 @@ Les nombreux avantages des tuples :
 
 Le principal inconvénient réside dans le fait qu'il n'est pas possible de modifier une valeur dans un tuple. La seule façon de le faire consiste à recréer le tuple : mon_tuple = ('rouge', 3, rond, factorielle)
 
-1.8 FONCTIONS
-1.8.1 DÉFINITION
+# 1.8 FONCTIONS
+## 1.8.1 DÉFINITION
 
 En Python, comme en C, il n'y a pas de différence (au niveau du langage) entre fonctions et procédures. Une procédure n'est qu'une fonction qui renvoie void en C et None en Python. Elles se définissent avec le mot-clé def :
-
+```
 def factorielle(n):
     if n < 0:
         return None
@@ -101,6 +99,7 @@ def factorielle(n):
         return 1
     else:
         return n * factorielle(n-1)
+```
 Dans cet exemple, notez :
 
 - l'usage de l'instruction elif (pour 'else if') ;
@@ -113,12 +112,12 @@ Notez également :
 
 - que le code de retour n'est pas forcément d'un unique et même type (ceci impliquera obligatoirement une gestion de ce code).
 
-1.8.2 PARAMÈTRES
+### 1.8.2 PARAMÈTRES
 
 Les fonctions ont le plus souvent des paramètres qui sont plutôt des paramètres obligatoires (comme dans l'exemple précédent). En Python, il est possible d'utiliser d'autres types de paramètres. Pour moi, le langage en définit quatre types en tout : les paramètres obligatoires classiques, les paramètres optionnels, les paramètres arbitraires et, enfin, les paramètres non explicites. Les deux derniers types sont laissés à la découverte du lecteur curieux ou feront l'objet d'un prochain article...
 
 Réécrivons la fonction factorielle avec un paramètre optionnel :
-
+```
 def factorielle(n, debug=False):
     if n < 0:
         return None
@@ -131,7 +130,8 @@ def factorielle(n, debug=False):
         return facto
     else:
         return n * factorielle(n-1)
-factorielle(5, True)
+```
+> factorielle(5, True)
 5
 4
 3
@@ -142,6 +142,7 @@ factorielle(5, True)
 5 : 120
 print('%d' % factorielle(4))
 24
+
 Vous noterez que :
 
 - True et False s'écrivent avec la première lettre en majuscule ! Si vous l'oubliez, l'interpréteur vous le rappellera sèchement !
