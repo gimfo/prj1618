@@ -1,27 +1,28 @@
-ANNEXE. APPRENDRE PYTHON : DE DÉBUTANT À EXPERT
-1. INTRODUCTION
+# APPRENDRE PYTHON : DE DÉBUTANT À EXPERT
+
+# INTRODUCTION
 Cette partie offre des suggestions pour apprendre Python soi-même et pour l'enseigner à des étudiants (certaines références peuvent aussi être utiles pour les programmeurs connaissant déjà Python.). Un très large travail pédagogique a déjà été réalisé sur ces sujets et il serait dommage de se priver des ressources proposées, d'autant plus qu'elles sont nombreuses à être accessible gratuitement sur internet. Il est aussi particulièrement aisé de trouver en ligne des informations à jour par rapport à la dernière version de Python. Cette partie est donc largement constituée de pointeurs, sélectionnés pour leur intérêt.
 
-1.1 OBTENIR PYTHON
+## OBTENIR PYTHON
 
 Python est installé en standard par la plupart des distributions Linux, et dans Mac OS X. Si nécessaire, il est possible d'obtenir une version adaptée à de nombreux systèmes d'exploitation via le site officiel (http://www.python.org/download/) — il existe même une version pour téléphone portable !
 
 Que ce soit pour apprendre soi-même le langage ou pour l'enseigner, il est utile d'employer une version récente de Python : le langage évolue en fournissant des outils de plus en plus pratiques, tout en continuant d'observer un principe de simplicité très appréciable. Les adresses web indiquées ici ont donc été choisies de façon à fournir des informations les plus récentes possibles.
 
-1.2 PYTHON INTERACTIF
+## PYTHON INTERACTIF
 
 Le shell Python, qui peut se lancer via la commande python, est une ressource pédagogique importante : il interprète les commandes Python entrées, permet de remonter dans l'historique de ces commandes ou d'y effectuer des recherches, etc. Une excellente alternative au shell standard est IPython (http://ipython.scipy.org/moin/), qui rend la vie du programmeur encore plus facile, avec en particulier la complétion des noms (de variable, de fonction, etc.) et un accès immédiat au débogueur standard de Python (pdb). Ces deux shells sont très pratiques pour effectuer des tests, même complexes, et il serait dommage de s'en priver.
 
-1.3 ÉDITER LE CODE PYTHON
+## ÉDITER LE CODE PYTHON
 
 De nombreux éditeurs aident à écrire en Python, en fournissant au minimum une coloration syntaxique (où par exemple les mots-clés sont mis dans une couleur particulière) et parfois une aide à la complétion des noms de variable, etc. Sous Unix, on peut citer les deux célèbres éditeurs emacs et vim. Python vient en standard avec l'environnement de développement intégré IDLE (qui peut se lancer avec la commande idle). Komodo Edit, qui a l'avantage d'être gratuit et multiplateforme, est aussi un choix que l'on peut faire, parmi d'autres. Bref, les éditeurs facilitant l'écriture en Python ne manquent pas !
 
-2. APPRENDRE SOI-MÊME PYTHON
-2.1 PYTHON QUAND ON N'A JAMAIS PROGRAMMÉ
+# APPRENDRE SOI-MÊME PYTHON
+## PYTHON QUAND ON N'A JAMAIS PROGRAMMÉ
 
 Il existe de nombreux textes d'enseignement de Python destinés aux débutants en programmation.
 
-2.1.1 RESSOURCES INTERNET GRATUITES
+### RESSOURCES INTERNET GRATUITES
 
 Les ressources internet gratuites présentées ci-dessous permettent d'apprendre Python par soi-même. Elles sont ordonnées et commencent par la référence que je recommande le plus.
 
